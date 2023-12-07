@@ -1,5 +1,5 @@
 import './style.css'
-import 'flowbite';
+import './flowbite';
 
 const expertise = document.querySelector('#expertise');
 const experience = document.querySelector('#experience');
