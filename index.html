@@ -10,31 +10,39 @@
 </head>
 
 <body class="box-border">
+  <button id="scroll-button" class="hidden fixed bottom-20 right-10 z-50 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
   <header class="bg-amber-500 h-screen">
     <nav class="dark:bg-gray-900">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-        <p class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Estelle Stenemur</p>
+        <p id="home" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Estelle Stenemur</p>
 
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a href="#"
+              <a href="#home"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              <a href="#about"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >About</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+              <a href="#projects"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Projects</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              <a href="#contact"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact</a>
             </li>
           </ul>
         </div>
@@ -134,7 +142,7 @@
       </div>
     </div>
   </header>
-  <section class="bg-green-500 h-screen">
+  <section id="about" class="bg-green-500 h-screen">
     <div class="max-w-screen-xl h-auto flex flex-wrap items-center justify-between mx-auto p-4">
 
       <p class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">About</p>
@@ -182,17 +190,26 @@
         </div>
 
   </section>
-  <section class="bg-black h-screen">
+  <section id="projects" class="bg-black h-screen">
     <div class="max-w-screen-xl h-auto flex flex-wrap items-center justify-between mx-auto p-4">
-
       <p class="self-center text-2xl font-semibold whitespace-nowrap text-white">Projects</p>
     </div>
-    <div class="grid grid-cols-2">
-      <div class="">
-      </div>
-      </div>
-      </section>
-        <section class="bg-pink-400 h-screen dark:bg-gray-900">
+    
+    <!-- Centered button -->
+    <div class="flex justify-center items-center">
+      <button class="animate-rainbow px-12 py-8 font-bold text-white rounded-full border-4 border-blue-500 bg-gradient-to-r from-blue-500 via-green-500 to-pink-500 hover:bg-yellow-400 hover:border-yellow-600 transform transition-transform duration-200 ease-in-out hover:scale-110">
+        Play Games
+      </button>
+        
+      <button class="inline-block py-6 px-12 bg-amber-500 text-white font-semibold rounded-lg shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-amber-600 hover:text-gray-100">
+        View Projects
+      </button>
+    </div>
+  </section>
+  
+  
+      
+        <section id="contact" class="bg-pink-400 h-screen dark:bg-gray-900">
           <div class="max-w-screen-xl h-auto flex flex-wrap items-center justify-between mx-auto p-4 pb-0">
     
             <p class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Contact</p>
@@ -200,18 +217,19 @@
           <div class="pl-8 pr-8 pb-0 lg:py-16 px-4 mx-auto max-w-screen-md">
               <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center dark:text-white">Send me an email!</h2>
               <p class="font-light text-center text-gray-900 dark:text-gray-400 sm:text-xl">I will reply as fast as I can.</p>
-              <form action="#" class="space-y-8">
+              <form action="https://formsubmit.co/c8a551dd62224b27ecd6a8c0db4703b9" method="POST" class="space-y-8">
+                <input type="hidden" name="_subject" value="New submission!">
                   <div>
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                      <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter your email" required>
+                      <input type="email" id="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Enter your email" required>
                   </div>
                   <div>
                       <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                      <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="What is the mail about" required>
+                      <input type="text" id="subject" name="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="What is the mail about" required>
                   </div>
                   <div class="sm:col-span-2">
                       <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                      <textarea id="message" rows="5" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Spill the beans here..."></textarea>
+                      <textarea id="message" name="message" rows="5" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Spill the beans here..."></textarea>
                   </div>
                   <button type="submit" class="py-3 px-5 text-sm font-medium text-center rounded-lg bg-gray-400 sm:w-fit hover:bg-gray-800 hover:text-gray-50 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:gray-primary-800">Send message</button>
               </form>

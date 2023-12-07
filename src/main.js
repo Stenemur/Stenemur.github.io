@@ -7,6 +7,11 @@ const qualifications = document.querySelector('#qualifications');
 const qualificationsionList = document.querySelector('#qualifications-list');
 const experienceList = document.querySelector('#experience-list');
 const expertiseList = document.querySelector('#expertise-list');
+const scrollButton = document.getElementById("scroll-button");
+const homeLink = document.querySelector('a[href="#home"]');
+const aboutLink = document.querySelector('a[href="#about"]');
+const projectsLink = document.querySelector('a[href="#projects"]');
+const contactLink = document.querySelector('a[href="#contact"]');
 
 expertise.addEventListener('click', (event) => {
   event.preventDefault();
@@ -34,3 +39,64 @@ qualifications.addEventListener('click', (event) => {
     experienceList.classList.add('hidden');
   }
 });
+
+// When you use navbar, you get scrolled to the right place
+homeLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    smoothScroll('#home');
+  });
+  
+  aboutLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    smoothScroll('#about');
+  });
+  
+  projectsLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    smoothScroll('#projects');
+  });
+  
+  contactLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    smoothScroll('#contact');
+  });
+
+// When the user clicks on the button, scroll to the top of the page
+scrollButton.addEventListener('click', scrollToTopFunction);
+
+// When the user scrolls down 30px from the top of the document, show the button
+window.onscroll = function () {
+  showButtonOnScroll();
+};
+
+function showButtonOnScroll() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+function scrollToTopFunction() {
+  const scrollStep = -window.scrollY / (500 / 15); // Scrolling speed
+
+  const scrollInterval = setInterval(() => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop <= 0) {
+      clearInterval(scrollInterval);
+    }
+
+    window.scrollTo(0, scrollTop + scrollStep);
+  }, 15); // Scroll interval in milliseconds
+}
+
+//scroll smoothly to the specific target element on the page when called.
+function smoothScroll(targetId) {
+    const target = document.querySelector(targetId);
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    } }
