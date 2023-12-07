@@ -43,22 +43,22 @@ qualifications.addEventListener('click', (event) => {
 // When you use navbar, you get scrolled to the right place
 homeLink.addEventListener('click', (event) => {
     event.preventDefault();
-    smoothScroll('#home');
+    navbarScroll('#home');
   });
   
   aboutLink.addEventListener('click', (event) => {
     event.preventDefault();
-    smoothScroll('#about');
+    navbarScroll('#about');
   });
   
   projectsLink.addEventListener('click', (event) => {
     event.preventDefault();
-    smoothScroll('#projects');
+    navbarScroll('#projects');
   });
   
   contactLink.addEventListener('click', (event) => {
     event.preventDefault();
-    smoothScroll('#contact');
+    navbarScroll('#contact');
   });
 
 // When the user clicks on the button, scroll to the top of the page
@@ -88,11 +88,11 @@ function scrollToTopFunction() {
     }
 
     window.scrollTo(0, scrollTop + scrollStep);
-  }, 15); // Scroll interval in milliseconds
+  }, 15); // Scroll interval 
 }
 
-//scroll smoothly to the specific target element on the page when called.
-function smoothScroll(targetId) {
+//scroll smoothly to the specific target element on the page from the navbar.
+function navbarScroll(targetId) {
     const target = document.querySelector(targetId);
     if (target) {
       window.scrollTo({
