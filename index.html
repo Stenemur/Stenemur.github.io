@@ -24,25 +24,33 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
+            <li class="relative group">
               <a href="#home"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page">Home</a>
+                <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+                <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
             </li>
-            <li>
+            <li class="relative group">
               <a href="#about"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >About</a>
+                <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+                <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
             </li>
-            <li>
+            <li class="relative group">
               <a href="#projects"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Projects</a>
+                <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+                <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
             </li>
-            <li>
+            <li class="relative group">
               <a href="#contact"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:underline hover:decoration-4 underline-offset-4 md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Contact</a>
+                <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+                <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
             </li>
           </ul>
         </div>
@@ -133,9 +141,9 @@
     <div class="grid gap-4 grid-cols-3">
       <div></div>
       <div class="flex justify-center items-center flex-col h-full mr-2">
-        <h2 class="font-semibold text-2xl">Hi!</h2>
-        <p class="font-semibold text-xl">Welcome to my portfolio</p>
-        <p class="text-lg">I am Estelle Stenemur a front-end developer student</p>
+        <h2 class="font-semibold text-5xl mb-2">Hi!</h2>
+        <p class="font-semibold text-3xl mb-2">Welcome to my portfolio</p>
+        <p class="text-xl">I am Estelle Stenemur a frontend-developer student</p>
       </div>
       <div class="">
         <img src="./public/Profilbild.jpg" alt="profile picture" class="ms-auto max-w-md rounded-full my-10 mr-10">
@@ -152,37 +160,49 @@
         <img src="./public/Profilbild.jpg" alt="profile picture" class="max-w-md rounded-full my-10 ml-10">
       </div>
 
-      <div class="flex justify-center items-center flex-col h-full">
-        <h2 class="font-semibold text-2xl mb-2">About me</h2>
+      <div class="flex justify-center items-start flex-col h-full">
+        <h2 class="font-semibold text-5xl mb-3">About me</h2>
         <div class="relative">
-        <p class="font-semibold text-xl mb-2">I am 26 years old and study frontend-development</p>  
+        <p class="font-semibold text-2xl mb-2">I am 26 years old and study frontend-development</p>  
         <div class="flex font-medium items-start mt-5">
           
-          <p id="expertise" class=" me-4 hover:text-gray-900 hover:underline hover:decoration-4 underline-offset-4 text-gray-700">Expertise</p>
-          <p id="experience" class="me-4 hover:text-gray-900 hover:underline hover:decoration-4 underline-offset-4 text-gray-700">Development experience</p>
-          <p id="qualifications" class="me-4 hover:text-gray-900 hover:underline hover:decoration-4 underline-offset-4 text-gray-700">Qualifications</p>
+          <p id="expertise" class="cursor-pointer relative group me-4 hover:text-gray-900 text-gray-700">
+            <span class="text-xl font-bold">Expertise</span>
+            <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+            <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+          </p>
+          <p id="experience" class="cursor-pointer relative group me-4 hover:text-gray-900 text-gray-700">
+            <span class="text-xl font-bold">Development experience</span>
+            <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+            <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+          </p>
+          <p id="qualifications" class="cursor-pointer relative group me-4 hover:text-gray-900 text-gray-700">
+            <span class="text-xl font-bold">Qualifications</span>
+            <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+            <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-gray-700 group-hover:w-1/2 group-hover:transition-all duration-500"></span>
+          </p>
         </div>
         <div id="expertise-list" class="absolute hidden py-2 px-4 mt-2">
           <ul> 
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">Course done</span> <br>HTML</li>
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">Course done</span> <br>CSS</li>
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">Course done</span> <br>JavaScript</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">Course done</span> <br>HTML</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">Course done</span> <br>CSS</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">Course done</span> <br>JavaScript</li>
           </ul>
         </div>
         
         <!-- Lista med erfarenhet -->
         <div id="experience-list" class="absolute hidden py-2 px-4 mt-2">
           <ul>
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">No experience in the field at the moment</span> <br>Studying</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">No experience in the field at the moment</span> <br>Studying</li>
           </ul>
         </div>
         
         <!-- Lista med utbildning -->
         <div id="qualifications-list" class="absolute hidden py-2 px-4 mt-2">
           <ul>
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">2013-2017</span> <br>RIG Snowboardgymnasiet, Malung</li>
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">2020-2020</span> <br>Webdevelopment 1, Luleå Tekniska Universitet</li>
-            <li class="mt-2 font-semibold text-medium"><span class="font-semibold text-gray-700">2023-Current</span> <br>Frontend-development, EC Utbildningar</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">2013-2017</span> <br>RIG Snowboardgymnasiet, Malung</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">2020-2020</span> <br>Webdevelopment 1, Luleå Tekniska Universitet</li>
+            <li class="mt-2 font-semibold text-medium"><span class="font-extrabold text-lg text-gray-700">2023-Current</span> <br>Frontend-development, EC Utbildningar</li>
           </ul>
         </div>
         </div>
@@ -234,8 +254,14 @@
                       <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
                       <textarea id="message" name="message" rows="5" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Spill the beans here..."></textarea>
                   </div>
-                  <button type="submit" class="py-3 px-5 text-sm font-medium text-center rounded-lg bg-gray-400 sm:w-fit hover:bg-gray-800 hover:text-gray-50 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:gray-primary-800">Send message</button>
-              </form>
+                  
+                  <button type="submit" class=" group relative inline-flex overflow-hidden transition-all py-3 px-5 text-sm font-medium hover:bg-white text-center rounded-lg bg-gray-400 sm:w-fit  focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:gray-primary-800">
+                  <span class="w-0 h-0 rounded bg-purple-600 absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
+                  <span class="w-full text-black transition-colors duration-300 ease-in-out group-hover:text-gray-400 z-10">
+                  Send message
+                  </span>
+                </button>
+                </form>
           </div>
         </section>
  
