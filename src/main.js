@@ -12,6 +12,10 @@ const homeLink = document.querySelector('a[href="#home"]');
 const aboutLink = document.querySelector('a[href="#about"]');
 const projectsLink = document.querySelector('a[href="#projects"]');
 const contactLink = document.querySelector('a[href="#contact"]');
+const hamburgerHomeLink = document.querySelector('a[href="#hamburger-home"]');
+const hamburgerAboutLink = document.querySelector('a[href="#hamburger-about"]');
+const hamburgerProjectsLink = document.querySelector('a[href="#hamburger-projects"]');
+const hamburgerContactLink = document.querySelector('a[href="#hamburger-contact"]');
 
 expertise.addEventListener('click', (event) => {
   event.preventDefault();
@@ -60,6 +64,25 @@ homeLink.addEventListener('click', (event) => {
     event.preventDefault();
     navbarScroll('#contact');
   });
+  hamburgerHomeLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    navbarScroll('home');
+  });
+  
+  hamburgerAboutLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    navbarScroll('#about');
+  });
+  
+  hamburgerProjectsLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    navbarScroll('#projects');
+  });
+  
+  hamburgerContactLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    navbarScroll('#contact');
+  });
 
 // When the user clicks on the button, scroll to the top of the page
 scrollButton.addEventListener('click', scrollToTopFunction);
@@ -93,6 +116,7 @@ function scrollToTopFunction() {
 
 //scroll smoothly to the specific target element on the page from the navbar.
 function navbarScroll(targetId) {
+  console.log('Navbar link clicked:', targetId);
     const target = document.querySelector(targetId);
     if (target) {
       window.scrollTo({
